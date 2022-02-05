@@ -1,4 +1,7 @@
-﻿using Application.Features.Brands.Commands.CreateBrand;
+﻿using System.Threading.Tasks;
+using Application.Features.Brands.Commands.CreateBrand;
+using Application.Features.Brands.Commands.DeleteBrand;
+using Application.Features.Brands.Commands.UpdateBrand;
 using Application.Features.Brands.Queries.GetBrandList;
 using Core.Application.Requests;
 using Microsoft.AspNetCore.Http;
@@ -24,6 +27,20 @@ namespace WebAPI.Controllers
             query.PageRequest = pageRequest;
             var result = await Mediator.Send(query);
             return Ok(result);
+        }
+        
+        [HttpPut]
+        public async Task<IActionResult> Update([FromBody] UpdateBrandCommand updateBrandCommand)
+        {
+            await Mediator.Send(updateBrandCommand);
+            return Ok();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromBody] DeleteBrandCommand deleteBrandCommand)
+        {
+            await Mediator.Send(deleteBrandCommand);
+            return Ok();
         }
 
     }
