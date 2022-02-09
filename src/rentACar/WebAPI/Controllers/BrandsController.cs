@@ -30,7 +30,7 @@ namespace WebAPI.Controllers
         }
         
         [HttpPut]
-        public async Task<IActionResult> Update([FromBody] UpdateBrandCommand updateBrandCommand)
+        public async Task<IActionResult> Update([FromBody] UpdateCarCommand updateBrandCommand)
         {
             await Mediator.Send(updateBrandCommand);
             return Ok();

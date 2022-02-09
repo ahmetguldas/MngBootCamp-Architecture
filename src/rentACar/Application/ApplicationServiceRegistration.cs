@@ -19,6 +19,7 @@ namespace Application
 
 
             services.AddScoped<BrandBusinessRules>();
+            services.AddScoped<CarBusinessRules>();
 
             return services;
         }

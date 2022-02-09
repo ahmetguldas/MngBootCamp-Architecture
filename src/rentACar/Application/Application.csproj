@@ -23,12 +23,10 @@
 
   <ItemGroup>
     <Folder Include="Features\Brands\Tests\" />
-    <Folder Include="Features\Cars\Commands\" />
     <Folder Include="Features\Cars\Dtos\" />
     <Folder Include="Features\Cars\Models\" />
     <Folder Include="Features\Cars\Profiles\" />
     <Folder Include="Features\Cars\Queries\" />
-    <Folder Include="Features\Cars\Rules\" />
     <Folder Include="Features\Cars\Tests\" />
     <Folder Include="Features\Models\Commands\" />
     <Folder Include="Features\Models\Dtos\" />
