@@ -1,5 +1,3 @@
-using System.Threading;
-using System.Threading.Tasks;
 using Application.Services.Repositories;
 using AutoMapper;
 using Domain.Entities;
@@ -7,7 +5,7 @@ using MediatR;
 
 namespace Application.Features.Brands.Commands.DeleteBrand
 {
-    public class DeleteBrandCommand:IRequest
+    public class DeleteBrandCommand : IRequest
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -31,4 +29,5 @@ namespace Application.Features.Brands.Commands.DeleteBrand
             }
         }
     }
+
 }
